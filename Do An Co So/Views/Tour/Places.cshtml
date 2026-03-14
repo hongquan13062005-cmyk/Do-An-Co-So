@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Địa điểm ăn chơi";
+}
+
+<div class="container mt-4">
+
+<h2 class="text-center text-primary">
+📍 Địa điểm ăn chơi tại @ViewBag.TourName
+</h2>
+
+<div class="row mt-4">
+
+@foreach (var place in ViewBag.Places)
+{
+<div class="col-md-4 mb-4">
+
+<div class="card shadow">
+
+<img src="@place.Img" class="card-img-top" style="height:200px; object-fit:cover;" />
+
+<div class="card-body text-center">
+
+<h5>@place.Name</h5>
+
+</div>
+
+</div>
+
+</div>
+}
+
+</div>
+
+<a href="/Tour" class="btn btn-secondary">
+Quay lại tour
+</a>
+
+</div>

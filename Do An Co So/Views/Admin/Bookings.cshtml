@@ -1,0 +1,25 @@
+﻿@model List<Do_An_Co_So.Models.Booking>
+
+<h2>Danh sách khách đặt tour</h2>
+
+<table border="1">
+<tr>
+    <th>Tên</th>
+    <th>Điện thoại</th>
+    <th>Ngày đi</th>
+    <th>Ngày về</th>
+    <th>Số người</th>
+</tr>
+
+@foreach(var item in Model)
+{
+<tr>
+    <td>@item.Name</td>
+    <td>@item.Phone</td>
+    <td>@item.StartDate</td>
+    <td>@item.EndDate</td>
+    <td>@item.People</td>
+</tr>
+}
+
+</table>

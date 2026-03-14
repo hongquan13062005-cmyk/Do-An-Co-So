@@ -1,0 +1,239 @@
+﻿@{
+ViewData["Title"] = "Trang chủ";
+}
+
+<style>
+
+body{
+    background:#f5f7fb;
+}
+
+/* Banner */
+.banner{
+    background: linear-gradient(135deg,#00c6ff,#0072ff);
+    color:white;
+    padding:100px 20px;
+    border-radius:20px;
+}
+
+.banner h1{
+    font-weight:700;
+}
+
+/* Card Tour */
+.card{
+    border:none;
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.card img{
+    height:220px;
+    object-fit:cover;
+}
+
+.price{
+    color:#ff4d4d;
+    font-weight:bold;
+    font-size:20px;
+}
+
+/* Feature */
+.feature{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
+    transition:0.3s;
+}
+
+.feature:hover{
+    transform:translateY(-5px);
+}
+
+/* Footer */
+footer{
+    margin-top:80px;
+}
+
+</style>
+
+<div class="container mt-4">
+
+<!-- Banner -->
+<div class="banner text-center mb-5 shadow">
+
+<h1 class="display-4">🌍 Jurni Travel</h1>
+
+<p class="lead">
+Khám phá những chuyến du lịch tuyệt vời khắp Việt Nam
+</p>
+
+<a asp-controller="Tour" asp-action="Index" class="btn btn-light btn-lg mt-3">
+Khám phá ngay
+</a>
+
+</div>
+
+<!-- Tour -->
+<h2 class="text-center mb-5">✨ Tour nổi bật</h2>
+
+<div class="row g-4">
+
+<!-- Đà Nẵng -->
+<div class="col-md-4">
+
+<div class="card">
+
+<img src="https://tse3.mm.bing.net/th/id/OIP.5g8eeX16n35XRp6_5JI2RwHaEo">
+
+<div class="card-body">
+
+<h5>Tour Đà Nẵng</h5>
+
+<p>
+Khám phá Bà Nà Hills, Cầu Vàng và bãi biển Mỹ Khê tuyệt đẹp.
+</p>
+
+<p class="price">3.000.000 VNĐ</p>
+
+<a asp-controller="Tour" asp-action="Booking" class="btn btn-primary w-100">
+Đặt Tour
+</a>
+
+</div>
+</div>
+
+</div>
+
+<!-- Đà Lạt -->
+<div class="col-md-4">
+
+<div class="card">
+
+<img src="https://1.bp.blogspot.com/-K_dwkb40TU0/XzXcrAl7t0I/AAAAAAAAXBc/C-Pe3qkh5AUBfvNOUCpUWK-G082hVk5QQCNcBGAsYHQ/s1920/Da%2BLat4.jpg">
+
+<div class="card-body">
+
+<h5>Tour Đà Lạt</h5>
+
+<p>
+Thành phố ngàn hoa với Hồ Xuân Hương và khí hậu mát mẻ quanh năm.
+</p>
+
+<p class="price">2.500.000 VNĐ</p>
+
+<a asp-controller="Tour" asp-action="Booking" class="btn btn-success w-100">
+Đặt Tour
+</a>
+
+</div>
+</div>
+
+</div>
+
+<!-- Phú Quốc -->
+<div class="col-md-4">
+
+<div class="card">
+
+<img src="https://anhdephd.vn/wp-content/uploads/2022/05/anh-dao-phu-quoc-voi-thuyen-du-lich.jpg">
+
+<div class="card-body">
+
+<h5>Tour Phú Quốc</h5>
+
+<p>
+Thiên đường biển đảo với bãi cát trắng và nước biển xanh ngọc.
+</p>
+
+<p class="price">4.500.000 VNĐ</p>
+
+<a asp-controller="Tour" asp-action="Booking" class="btn btn-warning w-100">
+Đặt Tour
+</a>
+
+</div>
+</div>
+
+</div>
+
+</div>
+
+<!-- Lý do chọn -->
+<h2 class="text-center mt-5 mb-5">⭐ Tại sao chọn Jurni Travel</h2>
+
+<div class="row text-center g-4">
+
+<div class="col-md-4">
+
+<div class="feature">
+
+<h3>🌍</h3>
+
+<h5>Nhiều điểm đến</h5>
+
+<p>
+Hàng trăm tour du lịch hấp dẫn khắp Việt Nam.
+</p>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="feature">
+
+<h3>💰</h3>
+
+<h5>Giá tốt</h5>
+
+<p>
+Cam kết giá tour hợp lý và nhiều ưu đãi.
+</p>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="feature">
+
+<h3>⭐</h3>
+
+<h5>Dịch vụ tốt</h5>
+
+<p>
+Đội ngũ hỗ trợ khách hàng 24/7.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Footer -->
+<footer class="text-center p-5 bg-dark text-white">
+
+<h4>🌍 Jurni Travel</h4>
+
+<p>Website đặt tour du lịch trực tuyến</p>
+
+<p>📞 0123 456 789 | 📧 jurnitravel@gmail.com</p>
+
+<hr style="background:white">
+
+<p>© 2026 Jurni Travel</p>
+
+</footer>

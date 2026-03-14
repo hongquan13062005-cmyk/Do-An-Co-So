@@ -1,0 +1,65 @@
+﻿@{
+    ViewData["Title"] = "Đặt Tour";
+}
+
+<div class="container mt-5">
+
+<div class="row justify-content-center">
+
+<div class="col-md-6">
+
+<div class="card shadow-lg">
+
+<div class="card-header bg-success text-white text-center">
+<h3>Đặt Tour Du Lịch</h3>
+<p class="mb-0">Điền thông tin để giữ chỗ ngay hôm nay</p>
+</div>
+
+<div class="card-body">
+
+<form method="post" asp-action="Booking" asp-controller="Tour">
+
+<div class="mb-3">
+<label class="form-label">👤 Họ và tên</label>
+<input type="text" name="name" class="form-control" placeholder="Nhập họ và tên..." required>
+</div>
+
+<div class="mb-3">
+<label class="form-label">📞 Số điện thoại</label>
+<input type="text" name="phone" class="form-control" placeholder="Nhập số điện thoại..." required>
+</div>
+
+<div class="mb-3">
+<label class="form-label">📅 Ngày khởi hành</label>
+<input type="date" name="startDate" class="form-control" required>
+</div>
+
+<div class="mb-3">
+<label class="form-label">📅 Ngày kết thúc</label>
+<input type="date" name="endDate" class="form-control" required>
+</div>
+
+<div class="mb-3">
+<label class="form-label">👥 Số người</label>
+<input type="number" name="people" class="form-control" placeholder="Nhập số người..." required>
+</div>
+
+<div class="d-grid gap-2">
+
+<button type="submit" class="btn btn-success btn-lg">
+✔ Xác nhận đặt tour
+</button>
+
+<a href="/Tour" class="btn btn-outline-secondary">
+← Quay lại danh sách tour
+</a>
+
+</div>
+
+</form>
+
+</div>
+</div>
+</div>
+</div>
+</div>
