@@ -2,9 +2,10 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
 COPY . .
+
 WORKDIR "/src/Do An Co So"
 
-RUN dotnet restore
+RUN dotnet restore "Do An Co So.csproj"
 RUN dotnet publish "Do An Co So.csproj" -c Release -o /app/publish
 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
